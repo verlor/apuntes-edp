@@ -1,0 +1,45 @@
+\documentclass[10pt,spanish,a4paper]{book}
+\usepackage[utf8]{inputenc}
+%\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\author{Hugo,Noe,Carlos}
+\title{Apuntes Ecuaciones Diferenciales Parciales}
+\begin{document}
+
+	\title{%
+	Lecturas acerca de Ecuaciones Diferenciales Parciales }
+	\author{Hugo Francisco Martinez Ortiz}
+	\maketitle
+	
+	\chapter{Introducción}
+		Una intro bien chidolira
+		\section{Tipos de ecuaciones?}
+		A lo mejor lleva algo, who knows?
+
+	\chapter{Método de las características}
+	Considerese la ecuación diferencial parcial
+	\[ a(x,y)\frac{\partial u}{\partial x} + b(x,y)\frac{\partial u}{\partial y} + c(x,y)u
+	   = d(x,y) \]
+	que en adelante se expresará como:
+	\[ a(x,y)u_{x} + b(x,y)u_{y} + c(x,y)u
+	   = d(x,y) \]
+	Se busca una transformación de coordenadas que pueda reducir esta ecuación diferencial parcial a una ecuación diferencial ordinaria. De manera que se propone la siguiente transformación:
+	\[\xi = \phi(x,y) \]
+	\[\eta = \psi(x,y) \]
+	\[u(x,y) = w(\xi,\eta)\]
+	donde $\frac{\partial(\xi,\eta)}{\partial(x,y)} \not= 0 \therefore$ la transformada es invertible. \\
+	Calculando $u_{x} $ y $ u_{y}$ de acuerdo a la nueva transformación
+	\[u_{x} = w_{\xi}\xi_{x} + w_{\eta}\eta_{x}\]
+	\[u_{y} = w_{\xi}\xi_{y} + w_{\eta}\eta_{y}\]
+	Sustituyendo en la ecuación diferencial parcial original
+	\[a(w_{\xi}\xi_{x} + w_{\eta}\eta_{x}) + b(w_{\xi}\xi_{y} + w_{\eta}\eta_{y}) + cw = \tilde{d}\]
+	y reordenando los términos
+	\[w_{\xi}(a\xi_{x} + b\xi_{y}) + w_{\eta}(a\eta_{x} + b\eta_{y}) + cw = \title{d} \]
+	El objetivo de este cambio de coordenadas es obtener una ecuación diferencial ordinaria, de manera se propone que
+	\[a\eta_{x} + b\eta_{y} = 0 \Rightarrow a\eta_{x} = -b\eta_{y} \]
+	es importante notar que para que la igual propuesta sea cierta, la función
+	\[\eta(x,y) = c\]
+	debe ser constante.
+\end{document}
